@@ -1,20 +1,14 @@
 import { Box, Link, VStack, Text, HStack, Img } from "@chakra-ui/react";
 import ImgStar from "../../assets/Star.png";
 import { t } from "i18next";
-
-interface CardRepositoryProps {
-  name: string;
-  description: string;
-  stargazers_count: number;
-  updated_at: string;
-}
+import { ICardRepositoryProps } from "../../types/ICardRepositoryProps/ICardRepositoryProps";
 
 const CardRepository = ({
   name,
   description,
   stargazers_count,
   updated_at,
-}: CardRepositoryProps) => {
+}: ICardRepositoryProps) => {
   return (
     <VStack spacing={4} align="stretch" mb={4}>
       <Box

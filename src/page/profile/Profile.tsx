@@ -30,15 +30,16 @@ import ImgTwitter from "../../assets/Twitter.png";
 import CardSmall from "../../components/CardSmall/CardSmall";
 import CardRepository from "../../components/CardRepository/CardRepository";
 import CardProfile from "../../components/CardProfile/CardProfile";
-import { getUserRepos, GithubRepo } from "../../services/getUserRepos";
+import { getUserRepos } from "../../services/getUserRepos";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { IGithubRepo } from "../../types/IGithubRepo/IGithubRepo";
 
 export default function Profile() {
   const { username } = useParams();
   const { t } = useTranslation();
   const loaderRef = useRef(null);
   const [searchTerm, setSearchTerm] = useState(""); // Estado para o termo de pesquisa
-  const [filteredRepos, setFilteredRepos] = useState<GithubRepo[]>([]); // Estado para os repositórios filtrados
+  const [filteredRepos, setFilteredRepos] = useState<IGithubRepo[]>([]); // Estado para os repositórios filtrados
   const [isSearching, setIsSearching] = useState(false); // Estado para indicar se está pesquisando
   const [sort, setSort] = useState("updated"); // Estado para o parâmetro de ordenação
   const [order, setOrder] = useState("desc"); // Estado para a direção da ordenação
@@ -67,7 +68,7 @@ export default function Profile() {
 
   // Função para carregar todas as páginas de repositórios
   const loadAllRepos = async () => {
-    let allRepos: GithubRepo[] = [];
+    let allRepos: IGithubRepo[] = [];
     let page = 1;
     let hasMore = true;
 
