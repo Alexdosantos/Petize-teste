@@ -1,7 +1,8 @@
 import { Box, Link, VStack, Text, HStack, Img } from "@chakra-ui/react";
 import ImgStar from "../../assets/Star.png";
-import { t } from "i18next";
 import { ICardRepositoryProps } from "../../types/ICardRepositoryProps/ICardRepositoryProps";
+import { useTranslation } from "react-i18next";
+
 
 const CardRepository = ({
   name,
@@ -9,6 +10,9 @@ const CardRepository = ({
   stargazers_count,
   updated_at,
 }: ICardRepositoryProps) => {
+
+  const { t } = useTranslation();
+ 
   return (
     <VStack spacing={4} align="stretch" mb={4}>
       <Box

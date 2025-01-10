@@ -1,9 +1,11 @@
+
+
 export const resources = {
-    en: {
+    pt: {
       translation: {      
         "Followers": "Seguidores",
         "Following": "Seguindo",
-        "Updated": "Atualizado",
+        "Updated": "Atualizado há",
         "Creation date": "Data de criação",
         "Stars": "Estrelas",
         "Push": "Push",
@@ -14,12 +16,13 @@ export const resources = {
         
   
       },
+      
     },
-    pt: {
+    en: {
       translation: {  
         "Seguidores": "Followers",
         "Seguindo": "Following",
-        "Atualizado": "Updated",
+        "Atualizado há": "Updated",
         "Data de criação": "Creation date",
         "Estrelas": "Stars",
         "Push": "Push",

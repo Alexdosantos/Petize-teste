@@ -19,6 +19,7 @@ import {
 import { useState, useEffect, useRef } from "react";
 import { getUser } from "../../services/getUser";
 
+
 import ImgSearch from "../../assets/Linear.png";
 import Imgfollowers from "../../assets/followers.png";
 import ImgHeart from "../../assets/heart.png";
@@ -28,11 +29,13 @@ import ImgEmail from "../../assets/email.png";
 import ImgLink from "../../assets/link.png";
 import ImgTwitter from "../../assets/Twitter.png";
 import CardSmall from "../../components/CardSmall/CardSmall";
-import CardRepository from "../../components/CardRepository/CardRepository";
+
 import CardProfile from "../../components/CardProfile/CardProfile";
 import { getUserRepos } from "../../services/getUserRepos";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { IGithubRepo } from "../../types/IGithubRepo/IGithubRepo";
+import CardTranslation from "../../components/CardTranslation/CardTranslation";
+import CardRepository from "../../components/CardRepository/CardRepository";
 
 export default function Profile() {
   const { username } = useParams();
@@ -155,7 +158,10 @@ export default function Profile() {
   }, [hasNextPage, isFetchingNextPage, fetchNextPage]);
 
   return (
-    <Container maxW="container.xl" py={8}>
+    <Container position="relative" maxW="container.xl" py={8}>
+      <Box position="absolute" top="10px" right="10px">
+        <CardTranslation />
+      </Box>
       <Grid
         templateColumns={{ base: "1fr", md: "300px 1fr" }}
         gap={8}
@@ -225,11 +231,11 @@ export default function Profile() {
             <Flex gap={4} display={{ base: "flex", md: "none" }}>
               <CardSmall
                 icon={Imgfollowers}
-                text={`${dataGetUser?.followers || 0} seguidores`}
+                text={`${dataGetUser?.followers || 0} ${t("Seguidores")}`}
               />
               <CardSmall
                 icon={ImgHeart}
-                text={`${dataGetUser?.following || 0} seguindo`}
+                text={`${dataGetUser?.following || 0} ${t("Seguindo")}`}
               />
             </Flex>
 

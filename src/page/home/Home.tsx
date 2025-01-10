@@ -1,5 +1,6 @@
 import { z } from "zod";
 import {
+  Box,
   Button,
   Flex,
   FormControl,
@@ -21,6 +22,7 @@ import { gitUserSchema } from "../../schemas/gitUserSchema/gitUserSchema";
 import { useMutation } from "@tanstack/react-query";
 import ImgSearch from "../../assets/Linear.png";
 import "./Home.css";
+import CardTranslation from "../../components/CardTranslation/CardTranslation";
 
 type GitUserFormValues = z.infer<typeof gitUserSchema>;
 
@@ -57,7 +59,17 @@ const Home = () => {
   };
 
   return (
-    <Flex w="100%" flexDir="column" justify={"center"} align="center" h="100vh">
+    <Flex
+      position={"relative"}
+      w="100%"
+      flexDir="column"
+      justify={"center"}
+      align="center"
+      h="100vh"
+    >
+      <Box position="absolute" top="10px" right="10px">
+        <CardTranslation />
+      </Box>
       <Heading display="flex" gap={2} mb={8} bgClip="text" size="4xl">
         <Text
           bg="#0069CA"
