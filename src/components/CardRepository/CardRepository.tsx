@@ -58,7 +58,7 @@ const CardRepository = ({
             {`${Math.floor(
               (new Date().getTime() - new Date(updated_at).getTime()) /
                 (1000 * 60 * 60 * 24)
-            )} dias`}
+            )} ${t("dias")}`}
           </Text>
         </HStack>
       </Box>
