@@ -23,7 +23,7 @@ import ImgSearch from "../../assets/Linear.png";
 import Imgfollowers from "../../assets/followers.png";
 import ImgHeart from "../../assets/heart.png";
 import ImgWork from "../../assets/work.png";
-import ImgLocation from "../../assets/location.png";
+import ImgLocation from "../../assets/Location.png";
 import ImgEmail from "../../assets/email.png";
 import ImgLink from "../../assets/link.png";
 import ImgTwitter from "../../assets/Twitter.png";
