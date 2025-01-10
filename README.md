@@ -10,6 +10,40 @@ Este projeto é uma aplicação baseada em **React** que utiliza **ChakraUI v2**
 
 ---
 
+![Home app](public/Mockap-Devs.png)
+![Profile app](public/Mockap-Devs1.png)
+
+
+## Descrição do Sistema
+
+O sistema é uma aplicação desenvolvida para realizar a **pesquisa de usuários no GitHub**. Através de uma interface amigável e intuitiva, os usuários podem buscar informações detalhadas de qualquer perfil público disponível na plataforma GitHub.
+
+### Principais Funcionalidades:
+
+1. **Busca de Usuário**:
+   - Ao digitar o nome de um usuário no campo de pesquisa, o sistema acessa a API pública do GitHub para recuperar informações completas sobre o perfil pesquisado.
+
+2. **Exibição de Informações do Usuário**:
+   - Nome do usuário.
+   - Nome de usuário no GitHub (username).
+   - Bio (descrição do perfil, caso esteja preenchida).
+   - Quantidade de repositórios públicos.
+   - Quantidade de seguidores e seguindo.
+   - Localização (se disponível no perfil).
+
+3. **Página de Perfil Compartilhável**:
+   - Cada perfil pesquisado possui uma página exclusiva acessível via link único no formato `/profile/:username`.
+
+4. **Componentes Modernos e Responsivos**:
+   - Estilização feita com **ChakraUI v2** para garantir uma experiência visual agradável e compatível com dispositivos móveis.
+
+5. **Internacionalização**:
+   - O sistema suporta os idiomas Português e Inglês, permitindo que o usuário escolha o idioma de sua preferência.
+
+Com essa aplicação, fica simples e rápido consultar dados de desenvolvedores e repositórios no GitHub, sendo útil para recrutadores, empresas ou qualquer pessoa interessada em obter informações de usuários da plataforma.
+
+---
+
 ## Funcionalidades
 
 - **React**: O projeto foi desenvolvido utilizando o framework React.

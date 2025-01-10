@@ -81,19 +81,31 @@ const Home = () => {
 
       <form onSubmit={handleSubmit(handleOnSubmit)} className="form-home">
         <FormControl isRequired display="flex" gap={2}>
-          <InputGroup size="lg" w="100%">
-            <InputLeftElement pointerEvents="none" >
-            <Img src={ImgSearch} alt="Search icon" w="24px" h="24px" />
+          <InputGroup position="relative" size="lg" w="100%">
+            <Text
+              position="absolute"
+              display={{ base: "flex", md: "none" }}
+              top="-10px"
+              left="10px"
+              bg="white"
+              px="2"
+              fontSize="sm"
+              color="gray.500"
+              zIndex="1"
+            >
+              {t("Search")}
+            </Text>
+            <InputLeftElement pointerEvents="none">
+              <Img src={ImgSearch} alt="Search icon" w="24px" h="24px" />
             </InputLeftElement>
             <Input
-                type="text"
-                {...register("username")}
-                placeholder={t("Search")}
-                fontFamily="Inter"
-                fontWeight="400"
-                w="100%"
-                size="lg"
-              />
+              type="text"
+              {...register("username")}
+              placeholder={t("Search")}
+              fontFamily="Inter"
+              fontWeight="400"
+              w="100%"
+            />
           </InputGroup>
 
           <Button
@@ -104,6 +116,7 @@ const Home = () => {
             color="white"
             fontFamily="Inter"
             fontWeight="400"
+            display={{ base: "none", md: "flex" }}
           >
             {t("Search")}
           </Button>
