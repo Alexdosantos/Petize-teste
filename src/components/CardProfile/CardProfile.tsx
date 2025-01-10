@@ -1,4 +1,4 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Avatar, Flex, Text, WrapItem } from "@chakra-ui/react";
 
 export type CardProfileProps = {
   name: string;
@@ -10,12 +10,9 @@ const CardProfile = ({ name, id, avatar_url }: CardProfileProps) => {
   return (
     <>
       <Flex>
-        <Image
-          src={avatar_url}
-          alt="Avatar"
-          boxSize="48px"
-          borderRadius="full"
-        />
+        <WrapItem>
+          <Avatar name={name} src={avatar_url} />
+        </WrapItem>
         <Flex direction="column" ml={4}>
           <Text fontSize="2xl" fontFamily="Inter" fontWeight="700">
             {name}

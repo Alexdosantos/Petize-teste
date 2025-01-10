@@ -7,7 +7,7 @@ i18next
 
   .init({
     resources,
-    lng: "pt-br",
+    lng: "pt",
     fallbackLng: "en",
     debug: true,
     interpolation: {
