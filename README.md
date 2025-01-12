@@ -2,7 +2,6 @@
 
 Este repositório contém a implementação do teste técnico solicitado pela empresa **Petize**, atendendo a todos os requisitos especificados.
 
-Currently, two official plugins are available:
 
 ## Visão Geral do Projeto
 
